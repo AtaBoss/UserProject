@@ -7,10 +7,6 @@ import axios from "axios";
 const baseUrl = "https://reqres.in/api/users?page=1";
 
 const App = () => {
-  axios.get(baseUrl).then((res) => {
-    setUsers(res.data.data);
-  });
-
   const [users, setUsers] = useState([
     {
       id: 1,
@@ -29,6 +25,12 @@ const App = () => {
       isHappy: false,
     },
   ]);
+
+  React.useEffect(() => {
+    axios.get(baseUrl).then((res) => {
+      setUsers(res.data.data);
+    });
+  }, []);
 
   const addUser = (user) => {
     const id = users.length + 1;
