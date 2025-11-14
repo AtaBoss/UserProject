@@ -1,0 +1,55 @@
+.user .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+/* glow animation: 5 цветов, каждая смена ~1s, плавный переход */
+.glow-text {
+  animation: colorCycle 5s linear infinite;
+  transition: color 0.6s ease, text-shadow 0.6s ease;
+}
+
+@keyframes colorCycle {
+  0% {
+    color: rgb(255, 99, 71);
+    text-shadow: 0 0 12px rgba(255, 99, 71, 0.55);
+  }
+  20% {
+    color: rgb(255, 165, 0);
+    text-shadow: 0 0 12px rgba(255, 165, 0, 0.55);
+  }
+  40% {
+    color: rgb(255, 215, 0);
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.55);
+  }
+  60% {
+    color: rgb(144, 238, 144);
+    text-shadow: 0 0 12px rgba(144, 238, 144, 0.55);
+  }
+  80% {
+    color: rgb(255, 105, 180);
+    text-shadow: 0 0 12px rgba(255, 105, 180, 0.55);
+  }
+  100% {
+    color: rgb(255, 99, 71);
+    text-shadow: 0 0 12px rgba(255, 99, 71, 0.55);
+  }
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd7c0, #ffb4d4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #08202a;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+}

@@ -23,7 +23,7 @@ const AddUser = (props) => {
           }
         />
         <input
-          placeholder="SurnameName "
+          placeholder="Surname "
           onChange={(e) =>
             setState((prevState) => ({
               ...prevState,
@@ -31,14 +31,11 @@ const AddUser = (props) => {
             }))
           }
         />
-        <textarea
-          placeholder="Biografy"
-          onChange={(e) =>
-            setState((prevState) => ({ ...prevState, bio: e.target.value }))
-          }
-        ></textarea>
+        <button className="add-photo" type="button">
+          Add Photo
+        </button>
         <input
-          placeholder="Age "
+          placeholder="Email "
           onChange={(e) =>
             setState((prevState) => ({ ...prevState, age: e.target.value }))
           }
@@ -69,7 +66,7 @@ const AddUser = (props) => {
             props.onAdd(userAdd);
           }}
         >
-          Add
+          Add Contact
         </button>
       </form>
     </div>
